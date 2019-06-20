@@ -1,0 +1,15 @@
+<div class="col-xs-12 mb-2">
+  <app-navbar [titreNavbar]="this.title" [logged]="logged"></app-navbar>
+</div>
+<div class="row">
+  <div class="col-12">
+    <h1 class="text-center">{{ objectPage?.titre }}</h1>
+  </div>
+  <div class="col-12">
+    <h2>{{objectPage?.content}}</h2>
+  </div>
+</div>
+<div class="col-xs-12 text-center">
+  <h6 id="footer">&copy; Tous droits réservés</h6>
+  <a routerLink="../" class="text-center">Retour aux pages</a>
+</div>

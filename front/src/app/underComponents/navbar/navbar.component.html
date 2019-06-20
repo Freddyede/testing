@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink=''>{{ titreNavbar }}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="pages">Pages</a>
+      </li>
+    </ul>
+    <div *ngIf="!logged">
+      <a routerLink="login"><button (click)="getToken()" class="btn btn-success">Login</button></a>
+    </div>
+    <div *ngIf="logged">
+      <a [routerLink]="'../users'"><button class="btn btn-info">Mes informations</button></a>
+    </div>
+    <div *ngIf="logged">
+      <button (click)="desactiveToken()" class="btn btn-danger">Logout</button>
+    </div>
+  </div>
+</nav>
