@@ -12,6 +12,8 @@ import {Router} from '@angular/router';
 })
 export class RegistrationComponent implements OnInit {
   title = 'Navigation';
+  error: boolean;
+  errorMessage: string;
   @Output() LoginStart: EventEmitter<any> = new EventEmitter();
   registrationActive = true;
   registrationObject: any = {
@@ -22,9 +24,21 @@ export class RegistrationComponent implements OnInit {
   setValeurRegistration() {
     this.registrationActive = false;
     const obj = this.registrationObject;
-    this.auth.Registration(obj).subscribe();
-    this.LoginStart.emit('login');
-    this.router.navigate(['/login']).then();
+    const regexEmail = /^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,4}$/;
+    if (regexEmail.test(this.registrationObject.mail)) {
+      this.auth.Registration(obj).subscribe();
+      this.LoginStart.emit('login');
+      this.router.navigate(['/login']).then();
+    } else {
+      if (!regexEmail.test(this.registrationObject.mail)) {
+        this.error = true;
+        this.errorMessage = 'Votre adresse email n\'est pas correct';
+      }
+    }
+  }
+  deleteAlertMessage() {
+    this.error = false;
+    this.errorMessage = null;
   }
   ngOnInit() {
   }

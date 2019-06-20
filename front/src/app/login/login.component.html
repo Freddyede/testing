@@ -2,17 +2,17 @@
   <app-navbar [titreNavbar]="this.title"></app-navbar>
 </div>
 <div class="col-xs-12">
-  <div (click)="deleteAlert()" class="alert alert-danger" *ngIf="errorMessage" role="alert">
+  <div class="alert alert-danger" *ngIf="errorMessage" role="alert">
     {{ errorMessage }}
   </div>
   <form novalidate method="POST">
     <div class="text-center form-group">
       <label for="mail">Mail</label>
-      <input type="mail" required class="form-control" id="mail" name="mail" [(ngModel)]="loginObject.mail">
+      <input (click)="deleteAlert()" type="mail" required class="form-control" id="mail" name="mail" [(ngModel)]="loginObject.mail"/>
     </div>
     <div class="text-center form-group">
       <label for="password">Password</label>
-      <input type="password" required class="form-control" id="password" name="password" [(ngModel)]="loginObject.password">
+      <input type="password" required class="form-control" id="password" name="password" [(ngModel)]="loginObject.password"/>
     </div>
     <div class="col-xs-12 text-center">
       <button type="button" (click)="setLogin()">Submit</button>

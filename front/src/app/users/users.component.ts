@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UserServices} from '../services/user.services';
+import {Router} from '@angular/router';
 
 @Component({
   providers: [UserServices],
@@ -10,15 +11,21 @@ import {UserServices} from '../services/user.services';
 export class UsersComponent implements OnInit {
   title = 'Modification utilisateur';
   private objectUser: object;
+  private logged: boolean;
   private newObjectUser: any = {};
-  constructor(private userService: UserServices) { }
+
+  constructor(private userService: UserServices, private router: Router) { }
 
   ngOnInit() {
     console.log(localStorage.getItem('idUser'));
-    this.userService.findBy(localStorage.getItem('idUser')).subscribe(data => this.objectUser = data);
+    this.userService.findBy(localStorage.getItem('idUser'), localStorage.getItem('token'))
+      .subscribe(data => {
+        this.objectUser = data;
+      });
+    this.logged = localStorage.getItem('token') !== null;
   }
   setUsers() {
-    console.log(this.newObjectUser);
+    this.userService.putUsers(localStorage.getItem('idUser'), localStorage.getItem('token'), this.newObjectUser).subscribe(() => this.router.navigate(['pages']));
   }
 
 }

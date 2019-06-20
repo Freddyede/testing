@@ -32,8 +32,8 @@ export class LoginComponent implements OnInit {
               private Message: MessageLoginService) { }
   setLogin() {
     this.activeToken();
-    const regex = /^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,4}$/;
-    if (regex.test(this.loginObject.mail)) {
+    const regexEmail = /^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,4}$/;
+    if (regexEmail.test(this.loginObject.mail)) {
       const mail = this.loginObject.mail;
       const password = this.loginObject.password;
       this.Auth.Login(mail, password).subscribe(data => {
@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
           this.Message.setMessage(this.successMessage);
           return this.router.navigate(['pages']);
         }
-        });
+      });
     } else {
       this.errorMessage = 'Votre adresse email n\'est pas correct';
     }

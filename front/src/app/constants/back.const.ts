@@ -5,5 +5,8 @@ export const BACK = {
 };
 
 export const ROUTES = {
-  urlUser: 'users'
+  urlUser: '/users',
+  urlUserModif: '/users/',
+  urlPages: '/pages',
+  urlPagesModif: '/pages/'
 };

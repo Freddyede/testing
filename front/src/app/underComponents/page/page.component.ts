@@ -13,8 +13,13 @@ export class PageComponent implements OnInit {
   constructor(private Message: MessageLoginService) { }
   deleteAlert() {
     this.successMessage = null;
+    this.successMessage = null;
   }
   ngOnInit() {
+    setTimeout(() => {
+      this.successMessage = null;
+      this.successMessage = null;
+    }, 5000);
     this.successMessage = this.Message.getMessage();
     this.logged = localStorage.getItem('token') !== null;
   }
