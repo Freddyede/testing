@@ -1,0 +1,211 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'bcrypt',
+1 verbose cli   'mongoos',
+1 verbose cli   'cors',
+1 verbose cli   'jsonwebtoken' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 verbose config Skipping project config: /home/franck/.npmrc. (matches userconfig)
+5 silly loadCurrentTree Starting
+6 silly install loadCurrentTree
+7 silly install readLocalPackageData
+8 silly fetchPackageMetaData bcrypt
+9 silly fetchPackageMetaData mongoos
+10 silly fetchPackageMetaData cors
+11 silly fetchPackageMetaData jsonwebtoken
+12 silly fetchNamedPackageData bcrypt
+13 silly mapToRegistry name bcrypt
+14 silly mapToRegistry using default registry
+15 silly mapToRegistry registry https://registry.npmjs.org/
+16 silly mapToRegistry uri https://registry.npmjs.org/bcrypt
+17 silly fetchNamedPackageData mongoos
+18 silly mapToRegistry name mongoos
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry uri https://registry.npmjs.org/mongoos
+22 silly fetchNamedPackageData cors
+23 silly mapToRegistry name cors
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry uri https://registry.npmjs.org/cors
+27 silly fetchNamedPackageData jsonwebtoken
+28 silly mapToRegistry name jsonwebtoken
+29 silly mapToRegistry using default registry
+30 silly mapToRegistry registry https://registry.npmjs.org/
+31 silly mapToRegistry uri https://registry.npmjs.org/jsonwebtoken
+32 verbose request uri https://registry.npmjs.org/bcrypt
+33 verbose request no auth needed
+34 info attempt registry request try #1 at 20:53:22
+35 verbose request id effb51bdefb1f60a
+36 http request GET https://registry.npmjs.org/bcrypt
+37 verbose request uri https://registry.npmjs.org/mongoos
+38 verbose request no auth needed
+39 info attempt registry request try #1 at 20:53:22
+40 http request GET https://registry.npmjs.org/mongoos
+41 verbose request uri https://registry.npmjs.org/cors
+42 verbose request no auth needed
+43 info attempt registry request try #1 at 20:53:22
+44 http request GET https://registry.npmjs.org/cors
+45 verbose request uri https://registry.npmjs.org/jsonwebtoken
+46 verbose request no auth needed
+47 info attempt registry request try #1 at 20:53:22
+48 http request GET https://registry.npmjs.org/jsonwebtoken
+49 http 200 https://registry.npmjs.org/jsonwebtoken
+50 verbose headers { date: 'Mon, 17 Jun 2019 18:53:23 GMT',
+50 verbose headers   'content-type': 'application/json',
+50 verbose headers   'transfer-encoding': 'chunked',
+50 verbose headers   connection: 'keep-alive',
+50 verbose headers   'set-cookie':
+50 verbose headers    [ '__cfduid=d97f6193bd6ba7a71d2e36cdbaeecc27e1560797603; expires=Tue, 16-Jun-20 18:53:23 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+50 verbose headers   'cf-cache-status': 'HIT',
+50 verbose headers   'cache-control': 'max-age=300',
+50 verbose headers   'cf-ray': '4e8739db7febcdab-CDG',
+50 verbose headers   etag: 'W/"dfcd653e713dad2dccb18025662b9df8"',
+50 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+50 verbose headers   'last-modified': 'Mon, 18 Mar 2019 12:07:41 GMT',
+50 verbose headers   vary: 'accept-encoding, accept',
+50 verbose headers   'x-amz-meta-rev': '454-d551d021e520f9cf5c811a30617d1831',
+50 verbose headers   server: 'cloudflare',
+50 verbose headers   'content-encoding': 'gzip' }
+51 silly get cb [ 200,
+51 silly get   { date: 'Mon, 17 Jun 2019 18:53:23 GMT',
+51 silly get     'content-type': 'application/json',
+51 silly get     'transfer-encoding': 'chunked',
+51 silly get     connection: 'keep-alive',
+51 silly get     'set-cookie':
+51 silly get      [ '__cfduid=d97f6193bd6ba7a71d2e36cdbaeecc27e1560797603; expires=Tue, 16-Jun-20 18:53:23 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+51 silly get     'cf-cache-status': 'HIT',
+51 silly get     'cache-control': 'max-age=300',
+51 silly get     'cf-ray': '4e8739db7febcdab-CDG',
+51 silly get     etag: 'W/"dfcd653e713dad2dccb18025662b9df8"',
+51 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+51 silly get     'last-modified': 'Mon, 18 Mar 2019 12:07:41 GMT',
+51 silly get     vary: 'accept-encoding, accept',
+51 silly get     'x-amz-meta-rev': '454-d551d021e520f9cf5c811a30617d1831',
+51 silly get     server: 'cloudflare',
+51 silly get     'content-encoding': 'gzip' } ]
+52 verbose get saving jsonwebtoken to /home/franck/.npm/registry.npmjs.org/jsonwebtoken/.cache.json
+53 http 200 https://registry.npmjs.org/cors
+54 verbose headers { date: 'Mon, 17 Jun 2019 18:53:23 GMT',
+54 verbose headers   'content-type': 'application/json',
+54 verbose headers   'transfer-encoding': 'chunked',
+54 verbose headers   connection: 'keep-alive',
+54 verbose headers   'set-cookie':
+54 verbose headers    [ '__cfduid=dd97dab913c2bc3a1cf58b65bcbd1b9771560797603; expires=Tue, 16-Jun-20 18:53:23 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+54 verbose headers   'cf-cache-status': 'HIT',
+54 verbose headers   'cache-control': 'max-age=300',
+54 verbose headers   'cf-ray': '4e8739db78c53c15-CDG',
+54 verbose headers   etag: 'W/"a8f9985ebf311347519efb088f1b0149"',
+54 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+54 verbose headers   'last-modified': 'Tue, 01 Jan 2019 16:33:14 GMT',
+54 verbose headers   vary: 'accept-encoding, accept',
+54 verbose headers   'x-amz-meta-rev': '363-aa409d7f82da65ca7e2ecb137997e2c1',
+54 verbose headers   server: 'cloudflare',
+54 verbose headers   'content-encoding': 'gzip' }
+55 silly get cb [ 200,
+55 silly get   { date: 'Mon, 17 Jun 2019 18:53:23 GMT',
+55 silly get     'content-type': 'application/json',
+55 silly get     'transfer-encoding': 'chunked',
+55 silly get     connection: 'keep-alive',
+55 silly get     'set-cookie':
+55 silly get      [ '__cfduid=dd97dab913c2bc3a1cf58b65bcbd1b9771560797603; expires=Tue, 16-Jun-20 18:53:23 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+55 silly get     'cf-cache-status': 'HIT',
+55 silly get     'cache-control': 'max-age=300',
+55 silly get     'cf-ray': '4e8739db78c53c15-CDG',
+55 silly get     etag: 'W/"a8f9985ebf311347519efb088f1b0149"',
+55 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+55 silly get     'last-modified': 'Tue, 01 Jan 2019 16:33:14 GMT',
+55 silly get     vary: 'accept-encoding, accept',
+55 silly get     'x-amz-meta-rev': '363-aa409d7f82da65ca7e2ecb137997e2c1',
+55 silly get     server: 'cloudflare',
+55 silly get     'content-encoding': 'gzip' } ]
+56 verbose get saving cors to /home/franck/.npm/registry.npmjs.org/cors/.cache.json
+57 http 200 https://registry.npmjs.org/bcrypt
+58 verbose headers { date: 'Mon, 17 Jun 2019 18:53:23 GMT',
+58 verbose headers   'content-type': 'application/json',
+58 verbose headers   'transfer-encoding': 'chunked',
+58 verbose headers   connection: 'keep-alive',
+58 verbose headers   'set-cookie':
+58 verbose headers    [ '__cfduid=d99bd68fea8e1d2031e889aa5e5fc63a31560797603; expires=Tue, 16-Jun-20 18:53:23 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+58 verbose headers   'cf-cache-status': 'HIT',
+58 verbose headers   'cache-control': 'max-age=300',
+58 verbose headers   'cf-ray': '4e8739db7be4b77b-CDG',
+58 verbose headers   etag: 'W/"46fde888bf5cab729c8f944536d650a8"',
+58 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+58 verbose headers   'last-modified': 'Sun, 14 Apr 2019 09:26:01 GMT',
+58 verbose headers   vary: 'accept-encoding, accept',
+58 verbose headers   'x-amz-meta-rev': '490-00e4bbf337ebb7de81a1923de31df227',
+58 verbose headers   server: 'cloudflare',
+58 verbose headers   'content-encoding': 'gzip' }
+59 silly get cb [ 200,
+59 silly get   { date: 'Mon, 17 Jun 2019 18:53:23 GMT',
+59 silly get     'content-type': 'application/json',
+59 silly get     'transfer-encoding': 'chunked',
+59 silly get     connection: 'keep-alive',
+59 silly get     'set-cookie':
+59 silly get      [ '__cfduid=d99bd68fea8e1d2031e889aa5e5fc63a31560797603; expires=Tue, 16-Jun-20 18:53:23 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+59 silly get     'cf-cache-status': 'HIT',
+59 silly get     'cache-control': 'max-age=300',
+59 silly get     'cf-ray': '4e8739db7be4b77b-CDG',
+59 silly get     etag: 'W/"46fde888bf5cab729c8f944536d650a8"',
+59 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+59 silly get     'last-modified': 'Sun, 14 Apr 2019 09:26:01 GMT',
+59 silly get     vary: 'accept-encoding, accept',
+59 silly get     'x-amz-meta-rev': '490-00e4bbf337ebb7de81a1923de31df227',
+59 silly get     server: 'cloudflare',
+59 silly get     'content-encoding': 'gzip' } ]
+60 verbose get saving bcrypt to /home/franck/.npm/registry.npmjs.org/bcrypt/.cache.json
+61 http 200 https://registry.npmjs.org/mongoos
+62 verbose headers { date: 'Mon, 17 Jun 2019 18:53:23 GMT',
+62 verbose headers   'content-type': 'application/json; charset=UTF-8',
+62 verbose headers   'transfer-encoding': 'chunked',
+62 verbose headers   connection: 'keep-alive',
+62 verbose headers   'set-cookie':
+62 verbose headers    [ '__cfduid=d43927533f1a271123f6c4858a042d6e61560797603; expires=Tue, 16-Jun-20 18:53:23 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+62 verbose headers   'cf-cache-status': 'MISS',
+62 verbose headers   'cache-control': 'max-age=300',
+62 verbose headers   'cf-ray': '4e8739db5a2a68b2-CDG',
+62 verbose headers   etag: 'W/"dbfaefa3ff2e318888a8aa4219e4deeb"',
+62 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+62 verbose headers   'last-modified': 'Sun, 27 May 2018 08:30:18 GMT',
+62 verbose headers   vary: 'accept-encoding, accept',
+62 verbose headers   server: 'cloudflare',
+62 verbose headers   'content-encoding': 'gzip' }
+63 silly get cb [ 200,
+63 silly get   { date: 'Mon, 17 Jun 2019 18:53:23 GMT',
+63 silly get     'content-type': 'application/json; charset=UTF-8',
+63 silly get     'transfer-encoding': 'chunked',
+63 silly get     connection: 'keep-alive',
+63 silly get     'set-cookie':
+63 silly get      [ '__cfduid=d43927533f1a271123f6c4858a042d6e61560797603; expires=Tue, 16-Jun-20 18:53:23 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+63 silly get     'cf-cache-status': 'MISS',
+63 silly get     'cache-control': 'max-age=300',
+63 silly get     'cf-ray': '4e8739db5a2a68b2-CDG',
+63 silly get     etag: 'W/"dbfaefa3ff2e318888a8aa4219e4deeb"',
+63 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+63 silly get     'last-modified': 'Sun, 27 May 2018 08:30:18 GMT',
+63 silly get     vary: 'accept-encoding, accept',
+63 silly get     server: 'cloudflare',
+63 silly get     'content-encoding': 'gzip' } ]
+64 verbose get saving mongoos to /home/franck/.npm/registry.npmjs.org/mongoos/.cache.json
+65 verbose stack TypeError: Cannot convert undefined or null to object
+65 verbose stack     at Function.keys (<anonymous>)
+65 verbose stack     at pickVersionFromRegistryDocument (/usr/share/npm/lib/fetch-package-metadata.js:121:29)
+65 verbose stack     at /usr/share/npm/node_modules/iferr/index.js:13:50
+65 verbose stack     at /usr/share/npm/lib/utils/pulse-till-done.js:19:8
+65 verbose stack     at saved (/usr/share/npm/lib/cache/caching-client.js:168:7)
+65 verbose stack     at /usr/share/npm/node_modules/graceful-fs/polyfills.js:210:7
+65 verbose stack     at FSReqWrap.oncomplete (fs.js:135:15)
+66 verbose cwd /home/franck/Documents/webSite/back
+67 error Linux 4.15.0-20-generic
+68 error argv "/usr/bin/node" "/usr/bin/npm" "install" "--save" "bcrypt" "mongoos" "cors" "jsonwebtoken"
+69 error node v8.10.0
+70 error npm  v3.5.2
+71 error Cannot convert undefined or null to object
+72 error If you need help, you may report this error at:
+72 error     <https://github.com/npm/npm/issues>
+73 verbose exit [ 1, true ]

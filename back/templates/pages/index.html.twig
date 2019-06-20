@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('assets/css/favicon.css') }}">
+{% endblock %}
+{% block content %}
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th class="text-center">TITRE</th>
+                <th class="text-center">ACTIONS</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for page in pages %}
+            <tr>
+                <td class="text-center">
+                    {{ page.titre }}
+                </td>
+                <td>
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-4 col-lg-4 text-center">
+                                <a href="{{ path('back-office_page_modify',{id:page.id}) }}">
+                                    <i class="favicon fa fa-pencil fa-2x"></i>
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-md-4 col-lg-4 text-center">
+                                <a href="#">
+                                    <i class="favicon fa fa-line-chart fa-2x"></i>
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-md-4 col-lg-4 text-center">
+                                <a href="{{ path('back-office_page_delete',{id:page.id}) }}">
+                                    <i class="favicon fa fa-trash fa-2x" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
