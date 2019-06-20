@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
   successMessage: string;
   errorMessage: string;
   logged: false;
-  id: number;
   @Output() notify: EventEmitter<object> = new EventEmitter();
   @Output() storages: EventEmitter<object> = new EventEmitter();
   loginObject: any = {};
@@ -38,7 +37,7 @@ export class LoginComponent implements OnInit {
       const mail = this.loginObject.mail;
       const password = this.loginObject.password;
       this.Auth.Login(mail, password).subscribe(data => {
-        if (data.id) {
+        if (data) {
           // @ts-ignore
           this.successMessage = 'Vous vous êtes enregistrer avec succès';
           this.Message.setMessage(this.successMessage);
