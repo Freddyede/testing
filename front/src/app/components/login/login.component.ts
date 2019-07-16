@@ -1,13 +1,12 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
-import {AuthService } from '../services/Auth.service';
-import {UserServices} from '../services/user.services';
-import {TokenEntityService} from '../services/tokenEntity.service';
+import {AuthService } from '../../services/Auth.service';
+import { TokenEntityService } from '../../services/tokenEntity.service';
+
 @Component({
   providers: [
     AuthService,
-    UserServices,
     TokenEntityService
   ],
   selector: 'app-login',
