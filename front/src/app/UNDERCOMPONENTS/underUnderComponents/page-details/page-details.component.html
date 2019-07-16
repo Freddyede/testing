@@ -1,26 +1,19 @@
 <div class="col-xs-12 mb-2">
-  <app-navbar [titreNavbar]="this.title+this.id" [logged]="logged"></app-navbar>
+  <app-navbar [titreNavbar]="this.title" [logged]="logged"></app-navbar>
 </div>
 <div class="row">
   <div class="col-12 text-center">
-    <h1 class="font-weight-bold">{{objectPage?.titre}}</h1>
-  </div>
-  <div class="col-6 text-center">
-    <img id="imagesGood"  class="img-fluid offset-6" src="{{ objectPage?.images }}" *ngIf="objectPage?.images" alt="photos"/>
-    <img id="imagesFalse" class="img-fluid offset-6" src="https://img-0.journaldunet.com/YY8e7EtrRfdIfec9XwoXRcVylTI=/1280x/smart/67f08fc7bfa04fedbb78badd1df132b5/ccmcms-jdn/11048473.jpg" *ngIf="!objectPage?.images" alt="test"/>
+    <img id="imagesGood" src="{{ page?.images }}"/>
+    <img id="imagesFalse" src="https://img-0.journaldunet.com/YY8e7EtrRfdIfec9XwoXRcVylTI=/1280x/smart/67f08fc7bfa04fedbb78badd1df132b5/ccmcms-jdn/11048473.jpg" *ngIf="!page?.images"/>
   </div>
   <div class="col-12">
     <h1 class="text-center">{{ objectPage?.titre }}</h1>
   </div>
   <div class="col-12">
     <h2>{{objectPage?.content}}</h2>
-    <h4 *ngIf="objectPage?.hyperLink">
-      Pour plus d'informations veuillez suivre le liens :
-      <a *ngIf="objectPage?.site" target="_BLANK" href="https://{{objectPage?.hyperLink}}">{{objectPage?.hyperLinkContent}}</a>
-      <a target="_BLANK" href="https://www.google.fr/search?q={{objectPage?.hyperLink}}&oq=cd&aqs=chrome..69i57j0j69i60j0l3.409j0j7&client=ubuntu&sourceid=chrome&ie=UTF-8&safe=active" *ngIf="!objectPage?.site">{{objectPage?.hyperLinkContent}}</a>
-    </h4>
   </div>
 </div>
 <div class="col-xs-12 text-center">
   <h6 id="footer">&copy; Tous droits réservés</h6>
+  <a routerLink="../" class="text-center">Retour aux pages</a>
 </div>

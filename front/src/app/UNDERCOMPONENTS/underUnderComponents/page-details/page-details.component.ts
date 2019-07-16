@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {PagesServices} from '../../../SERVICES/pages.services';
+import {PagesServices} from '../../../services/pages.services';
 
 @Component({
   providers: [PagesServices],
@@ -11,7 +11,7 @@ import {PagesServices} from '../../../SERVICES/pages.services';
 export class PageDetailsComponent implements OnInit {
   id: number;
   objectPage;
-  title: string;
+  title;
   logged: false;
   constructor(private route: ActivatedRoute, private pageService: PagesServices) { }
   ngOnInit() {
@@ -20,8 +20,8 @@ export class PageDetailsComponent implements OnInit {
         .split(',')[1]
         .replace(/]$/, '')
     );
-    this.pageService.getPage(this.id).subscribe((data) => this.objectPage = data);
-    this.title = 'Pages ';
+    this.pageService.getPage(this.id).subscribe(data => this.objectPage = data);
+    this.title = 'Page' + this.id;
     // @ts-ignore
     this.logged = localStorage.getItem('token') !== null;
   }

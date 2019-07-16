@@ -4,7 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class TokenEntityService {
-  static setToken(newToken: any) {
+  static setToken(newToken: object) {
+    // @ts-ignore
     localStorage.setItem('token', JSON.stringify(newToken.token));
   }
 }

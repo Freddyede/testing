@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20190716101649 extends AbstractMigration
+final class Version20190601065208 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -22,8 +22,7 @@ final class Version20190716101649 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('CREATE TABLE evenements (id INT AUTO_INCREMENT NOT NULL, page_id INT DEFAULT NULL, ctr TINYINT(1) DEFAULT NULL, ctru TINYINT(1) DEFAULT NULL, type LONGTEXT DEFAULT NULL, environnement VARCHAR(255) DEFAULT NULL, INDEX IDX_E10AD400C4663E4 (page_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
-        $this->addSql('CREATE TABLE pages (id INT AUTO_INCREMENT NOT NULL, images LONGTEXT DEFAULT NULL, content LONGTEXT NOT NULL, titre VARCHAR(255) NOT NULL, hyper_link LONGTEXT DEFAULT NULL, hyper_link_content LONGTEXT NOT NULL, sub_content VARCHAR(255) NOT NULL, site TINYINT(1) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
+        $this->addSql('CREATE TABLE evenements (id INT AUTO_INCREMENT NOT NULL, page_id INT DEFAULT NULL, ctr TINYINT(1) DEFAULT NULL, ctru TINYINT(1) DEFAULT NULL, INDEX IDX_E10AD400C4663E4 (page_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
         $this->addSql('ALTER TABLE evenements ADD CONSTRAINT FK_E10AD400C4663E4 FOREIGN KEY (page_id) REFERENCES pages (id)');
     }
 
@@ -32,8 +31,6 @@ final class Version20190716101649 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE evenements DROP FOREIGN KEY FK_E10AD400C4663E4');
         $this->addSql('DROP TABLE evenements');
-        $this->addSql('DROP TABLE pages');
     }
 }

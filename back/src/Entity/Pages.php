@@ -7,10 +7,11 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ApiResource()
- * @ORM\Entity(repositoryClass="App\Repository\PagesRepository")
+ * @ORM\Entity()
  */
-class Pages {
-    /** 
+class Pages
+{
+    /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
@@ -46,11 +47,6 @@ class Pages {
      * @ORM\Column(type="string", length=255)
      */
     private $subContent;
-
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $site;
 
     public function getId(): ?int
     {
@@ -129,18 +125,6 @@ class Pages {
     public function setSubContent(string $subContent): self
     {
         $this->subContent = $subContent;
-
-        return $this;
-    }
-
-    public function getSite(): ?bool
-    {
-        return $this->site;
-    }
-
-    public function setSite(bool $site): self
-    {
-        $this->site = $site;
 
         return $this;
     }

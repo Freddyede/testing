@@ -1,8 +1,8 @@
-  import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { IPages } from '../INTERFACES/IPages';
-import { SERVER, ROUTESBACK } from '../CONSTANTS/back.const';
+import { IPages } from '../COMPONENTS/Interface/IPages';
+import { SERVER, ROUTESBACK } from '../constants/back.const';
 @Injectable()
 
 export class PagesServices {
