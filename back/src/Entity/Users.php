@@ -6,12 +6,13 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ApiResource()
  * @ORM\Entity(repositoryClass="App\Repository\UsersRepository")
  */
-class Users {
+class Users implements UserInterface {
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -44,9 +45,20 @@ class Users {
      */
     private $message;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Todos", mappedBy="user")
+     */
+    private $todos;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\CodeProblem", inversedBy="Users")
+     */
+    private $codeProblem;
+
     public function __construct()
     {
         $this->message = new ArrayCollection();
+        $this->todos = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -104,8 +116,8 @@ class Users {
      */
     public function setPassword(string $password): self
     {
-        $newPassword = base64_encode($password);
-        $this->password = $newPassword;
+
+        $this->password = $password;
         return $this;
     }
 
@@ -136,6 +148,83 @@ class Users {
                 $message->setUsers(null);
             }
         }
+
+        return $this;
+    }
+
+    /**
+     * Returns the roles granted to the user.
+     *
+     *     public function getRoles()
+     *     {
+     *         return ['ROLE_USER'];
+     *     }
+     *
+     * Alternatively, the roles might be stored on a ``roles`` property,
+     * and populated in any number of different ways when the user object
+     * is created.
+     *@return array
+     */
+    public function getRoles() {
+        return ['ROLE_USER'];
+    }
+
+    /**
+     * Returns the salt that was originally used to encode the password.
+     *
+     * This can return null if the password was not encoded using a salt.
+     *
+     * @return string|null The salt
+     */
+    public function getSalt() { return true;}
+
+    /**
+     * Removes sensitive data from the user.
+     *
+     * This is important if, at any given point, sensitive information like
+     * the plain-text password is stored on this object.
+     */
+    public function eraseCredentials(){ }
+
+    /**
+     * @return Collection|Todos[]
+     */
+    public function getTodos(): Collection
+    {
+        return $this->todos;
+    }
+
+    public function addTodo(Todos $todo): self
+    {
+        if (!$this->todos->contains($todo)) {
+            $this->todos[] = $todo;
+            $todo->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTodo(Todos $todo): self
+    {
+        if ($this->todos->contains($todo)) {
+            $this->todos->removeElement($todo);
+            // set the owning side to null (unless already changed)
+            if ($todo->getUser() === $this) {
+                $todo->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getCodeProblem(): ?CodeProblem
+    {
+        return $this->codeProblem;
+    }
+
+    public function setCodeProblem(?CodeProblem $codeProblem): self
+    {
+        $this->codeProblem = $codeProblem;
 
         return $this;
     }

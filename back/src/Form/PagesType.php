@@ -3,7 +3,7 @@
 namespace App\Form;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\{SubmitType, TextareaType, TextType};
+use Symfony\Component\Form\Extension\Core\Type\{SubmitType, TextareaType, TextType,CheckboxType};
 use Symfony\Component\Form\FormBuilderInterface;
 
 class PagesType extends AbstractType {
@@ -21,6 +21,11 @@ class PagesType extends AbstractType {
                     'class'=>'form-control'
                 ),
             ))
+            ->add('site',CheckboxType::class, 
+                array(
+                    'required'=>false
+                )
+            )
             ->add('subContent',TextType::class,array(
                 'attr'=>array(
                     'class'=>'form-control'

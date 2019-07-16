@@ -1,22 +1,71 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {LoginComponent} from './login/login.component';
-import {RegistrationComponent} from './registration/registration.component';
-import {HomePageComponent} from './home-page/home-page.component';
-import {PageDetailsComponent} from './underComponents/underUnderComponents/page-details/page-details.component';
-import {DetailsUserComponent} from './underComponents/details-user/details-user.component';
-import {AccueilComponent} from './accueil/accueil.component';
-import {AuthGuard} from './auth.guard';
-import {AuthService} from './services/Auth.service';
-import {UsersComponent} from './users/users.component';
+import {LoginComponent} from './COMPONENTS/login/login.component';
+import {RegistrationComponent} from './COMPONENTS/registration/registration.component';
+import {HomePageComponent} from './COMPONENTS/home-page/home-page.component';
+import {PageDetailsComponent} from './UNDERCOMPONENTS/underUnderComponents/page-details/page-details.component';
+import {AccueilComponent} from './COMPONENTS/accueil/accueil.component';
+import {AuthGuard} from './GUARDS/auth.guard';
+import {AuthService} from './SERVICES/Auth.service';
+import {ErrorComponent} from './COMPONENTS/error/error.component';
+import {ChatComponent} from './COMPONENTS/chat/chat.component';
+import {TodosComponent} from './COMPONENTS/todos/todos.component';
+import {TodosUpdateComponent} from './UNDERCOMPONENTS/todos-update/todos-update.component';
+// ROUTES
 const routes: Routes = [
-  {path: 'users/:id', component: DetailsUserComponent, canActivate: [AuthGuard]},
-  {path: 'pages/:id', component: PageDetailsComponent, canActivate: [AuthGuard]},
-  {path: '', component: AccueilComponent},
-  {path: 'pages', component: HomePageComponent, canActivate: [AuthGuard]},
-  {path: 'users', component: UsersComponent, canActivate: [AuthGuard]},
-  {path: 'login', component: LoginComponent},
-  {path: 'registration', component: RegistrationComponent}
+  // Accueil
+  {
+    path: '',
+    component: AccueilComponent
+  },
+  // Toutes les pages
+  {
+    path: 'pages',
+    component: HomePageComponent,
+    canActivate: [AuthGuard]
+  },
+  // Informations Page
+  {
+    path: 'pages/:id',
+    component: PageDetailsComponent,
+    canActivate: [AuthGuard]
+  },
+  // Tous les messages
+  {
+    path: 'messages',
+    component:ChatComponent,
+    canActivate: [AuthGuard]
+  },
+  // Connexion
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  // Inscription
+  {
+    path: 'registration',
+    component: RegistrationComponent
+  },
+  // Tâches
+  {
+    path:'todos',
+    component: TodosComponent,
+    canActivate: [AuthGuard]
+  },
+  // Modification Tâches
+  {
+    path:'todos/:id',
+    component:TodosUpdateComponent,
+    canActivate: [AuthGuard]
+  },
+  /* Error mode with errorComponent
+     Pages Erreur
+  */
+  {
+    path: '**',
+    component: ErrorComponent,
+    canActivate: [AuthGuard]
+  }
 ];
 @NgModule({
   providers: [AuthService, AuthGuard],

@@ -76,6 +76,14 @@
                                 {{ form_label(form.hyperLinkContent) }}
                                 {{ form_widget(form.hyperLinkContent) }}
                             </div>
+                            <div class="col-12">
+                                <div class="col-xs-1">
+                                    {{ form_label(form.site) }}
+                                </div>
+                                <div class="col-xs-2">
+                                    {{ form_widget(form.site) }}
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-12 text-center">
@@ -85,5 +93,6 @@
                 </div>
             </div>
         </div>
+        {{ form_end(form) }}
     {% endif %}
 {% endblock %}

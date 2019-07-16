@@ -1,0 +1,16 @@
+{% extends "base.loginAdmin.html.twig" %}
+
+{% block content %}
+
+{% if errors %}
+    <div class="alert alert-danger">{{ errors.messageKey|trans(errors.messageData, 'security') }}</div>
+{% endif %}
+<form action="{{ path('back_office_login') }}" method="POST">
+    <label for="email">Email :</label>
+    <input type="email" name="_username" id="email" value="{{username}}"/>
+    <label for="password">Password :</label>
+    <input type="password" name="_password" id="password"/>
+    <button>Login</button>
+</form>
+
+{% endblock %}

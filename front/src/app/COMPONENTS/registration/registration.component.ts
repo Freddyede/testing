@@ -1,5 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {AuthService} from '../services/Auth.service';
+import {AuthService} from '../../SERVICES/Auth.service';
 import {Router} from '@angular/router';
 
 // @ts-ignore
@@ -11,7 +11,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./registration.component.css'],
 })
 export class RegistrationComponent implements OnInit {
-  title = 'Navigation';
+  title = 'Inscription';
   error: boolean;
   errorMessage: string;
   @Output() LoginStart: EventEmitter<any> = new EventEmitter();

@@ -10,13 +10,26 @@ export const ROUTESBACK = {
     registration:'/registration',
     login: '/login'
   },
-  Pages:{
+  Pages: {
     getAllPage: '/pages',
     getOnePage: '/pages/'
   },
-  Users:{
+  Users: {
     getOneUser: '/users/',
     postOneUser: '/users',
     updateUser: '/users/'
   },
+  Messages: {
+    getMessages: '/messages',
+    postMessage: '/postMessages',
+    deleteMessage: '/messages'
+  },
+  Todos: {
+    postTasks: '/todos',
+    getTasks: '/getTodos',
+    updateTasks:'/todos/'
+  },
+  Search: {
+    pages: '/searchPages'
+  }
 };

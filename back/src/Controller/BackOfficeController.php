@@ -15,6 +15,7 @@ class BackOfficeController extends AbstractController
     public function index(){
         return $this->render($this->directory.'index.html.twig', [
             'titre' => null,
+            'title'=> 'Back-Office',
             'menuLeft'=>null
         ]);
     }

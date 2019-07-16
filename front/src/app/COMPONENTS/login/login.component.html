@@ -1,26 +1,23 @@
-<div class="col-xs-12 mb-5">
-  <app-navbar [titreNavbar]="this.title" [logged]="privateToken"></app-navbar>
-</div>
-<div class="col-xs-12">
-  <div class="alert alert-danger" *ngIf="errorMessage" role="alert">
-    {{ errorMessage }}
-  </div>
-  <form novalidate method="POST">
-    <div class="text-center form-group">
-      <label for="mail">Mail</label>
-      <input (click)="deleteAlert()" type="mail" required class="form-control" id="mail" name="mail" [(ngModel)]="loginObject.mail"/>
+<app-navbar [active]="'login'" [login]="true" [titreNavbar]="'Connexion'" [logged]="privateToken"></app-navbar>
+<div class="container">
+  <div class="col-xs-12">
+    <form novalidate method="POST">
+      <div class="text-center form-group">
+        <label for="mail">Mail</label>
+        <input type="mail" required class="form-control" id="mail" name="mail" [(ngModel)]="loginObject.mail"/>
+      </div>
+      <div class="text-center form-group">
+        <label for="password">Password</label>
+        <input type="password" required class="form-control" id="password" name="password" [(ngModel)]="loginObject.password"/>
+      </div>
+      <div class="col-xs-12 text-center">
+        <button type="button" (click)="setLogin()" *ngIf="!privateToken">Submit</button>
+        <a routerLink="../pages" *ngIf="privateToken"><button class="btn btn-success">Suite</button></a>
+      </div>
+    </form>
+    <div class="col-xs-12 mt-5 text-center">
+      <a routerLink="/registration">Pas encore inscrit ?<br>Inscrivez-vous ici...</a>
     </div>
-    <div class="text-center form-group">
-      <label for="password">Password</label>
-      <input type="password" required class="form-control" id="password" name="password" [(ngModel)]="loginObject.password"/>
-    </div>
-    <div class="col-xs-12 text-center">
-      <button type="button" (click)="setLogin()" *ngIf="!privateToken">Submit</button>
-      <a routerLink="../pages" *ngIf="privateToken"><button class="btn btn-success">Suite site</button></a>
-    </div>
-  </form>
-  <div class="col-xs-12 mt-5 text-center">
-    <a routerLink="/registration">Pas encore inscrit ?<br>Inscrivez-vous ici...</a>
   </div>
 </div>
 <div class="col-xs-12 text-center">

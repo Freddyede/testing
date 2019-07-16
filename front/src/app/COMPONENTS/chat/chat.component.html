@@ -1,0 +1,33 @@
+<app-navbar [active]="'messageComponent'" [titreNavbar]="this.title" [logged]="logged"></app-navbar>
+<div class="col-12" id="container">
+  <div class="row bg-dark">
+    <div id="containerMessage" class="container-fluid">
+      <div class="col-12 mt-5 mb-5" *ngFor="let data of objectUser">
+        <div class="card text-center">
+          <div class="card-header">
+            {{data?.username}}
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">
+              {{data?.message}}
+            </h5>
+          </div>
+          <div class="card-footer font-italic">
+            <p>{{data?.dateEnvoi}}</p>
+          </div>
+        </div>
+      </div> cxc
+    </div>
+    <div class="col-12">
+      <div class="input-group">
+        <textarea class="form-control" placeholder="Messages" name="content" [(ngModel)]="objectMessage.content" aria-label="Recipient's username" aria-describedby="basic-addon2"></textarea>
+        <div class="input-group-append">
+          <input (click)="sendMessage()" class="input-group-text" type="submit" value="Send message"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-12 text-center">
+  <h6 id="footer">&copy; Tous droits réservés</h6>
+</div>

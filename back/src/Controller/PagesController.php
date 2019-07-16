@@ -23,6 +23,7 @@ class PagesController extends AbstractController {
     public function indexPages(){
         return $this->render('pages/index.html.twig',array(
             'titre'=>$this->titre,
+            'title'=>'Pages',
             'pages'=>$this->getDoctrine()->getRepository(Pages::class)->findAll(),
             'menuLeft'=>null
         ));
@@ -53,6 +54,7 @@ class PagesController extends AbstractController {
         }
         return $this->render('pages/modify.html.twig',array(
             'titre'=>$titre,
+            'title'=>$titre,
             'page'=>$page,
             'form'=>$form->createView(),
             'menuLeft'=>null,
