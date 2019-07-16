@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {PagesServices} from '../../../services/pages.services';
+import { PagesServices } from '../../../SERVICES/pages.services';
 
 @Component({
   providers: [PagesServices],
