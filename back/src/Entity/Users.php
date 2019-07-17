@@ -36,7 +36,7 @@ class Users implements UserInterface {
     private $mail;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="text")
      */
     private $password;
 
@@ -105,8 +105,7 @@ class Users implements UserInterface {
      */
     public function setPassword(string $password): self
     {
-        $newPassword = base64_encode($password);
-        $this->password = $newPassword;
+        $this->password = $password;
         return $this;
     }
 
@@ -143,4 +142,7 @@ class Users implements UserInterface {
     public function getRoles(){
         return ["ROLE_USER"];
     }
+    public function getSalt(){ }
+
+    public function eraseCredentials() { }
 }

@@ -28,9 +28,10 @@ export class RegistrationComponent implements OnInit {
   setValeurRegistration() {
     this.registrationActive = false;
     const obj = this.registrationObject;
+    console.log(this.registrationObject);
     const regexEmail = /^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,4}$/;
     if (regexEmail.test(this.registrationObject.mail)) {
-      this.auth.Registration(obj).subscribe();
+      this.auth.Registration(obj).subscribe(data => console.log(data));
       this.LoginStart.emit('login');
       this.router.navigate(['/login']).then();
     } else {

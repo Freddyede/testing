@@ -20,7 +20,7 @@ export class AuthService {
     })
   }
   Registration(obj) {
-    return this.http.post(SERVER.url_get + ROUTESBACK.Authentification.registration, obj, {
+    return this.http.post(SERVER.url_get +   ROUTESBACK.Users.postOneUser, obj, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
