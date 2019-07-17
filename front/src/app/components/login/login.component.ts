@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
         TokenEntityService.setToken(data);
       });
     this.Auth.getUsers(mail, password).subscribe( data =>{
-      localStorage.setItem('idUser', JSON.stringify(data));
+      localStorage.setItem('idUser',JSON.stringify(data.id));
     });
     this.logged = true;
     this.privateToken = !!localStorage.getItem('token');
@@ -37,5 +37,6 @@ export class LoginComponent implements OnInit {
   deleteAlert() {
     this.errorMessage = null;
   }
-  ngOnInit() { }
+  ngOnInit() {
+  }
 }

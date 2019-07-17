@@ -1,20 +1,16 @@
-<div class="col-xs-12 mb-2">
-  <app-navbar [titreNavbar]="this.title" [logged]="logged"></app-navbar>
-</div>
-<div class="container-fluid" *ngIf="logged">
-  <div class="alert alert-success" *ngIf="successMessage" role="alert" (click)="deleteAlert()">
-    {{ successMessage }}
-  </div>
-  <div class="col-12">
-    <div class="row">
-      <div class="col-md-6" *ngFor="let page of pages">
-        <div class="card" style="width: 18rem;">
-          <a routerLink="['pages',{{page?.id}}]">
-            <img class="card-img-top" *ngIf="page?.images" src="{{ page?.images }}"/>
-            <img class="card-img-top" src="https://img-0.journaldunet.com/YY8e7EtrRfdIfec9XwoXRcVylTI=/1280x/smart/67f08fc7bfa04fedbb78badd1df132b5/ccmcms-jdn/11048473.jpg"*ngIf="!page?.images"/>
-          </a>
-          <div class="card-body">
-            <p class="card-text">{{ page?.subContent }}</p>
+ <app-navbar [titreNavbar]="this.title" [logged]="logged"></app-navbar>
+ <div class="container mb-5">
+  <div class="container-fluid" *ngIf="logged">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-md-6" *ngFor="let page of pages">
+          <div class="card" style="width: 18rem;">
+            <a routerLink="['pages',{{page?.id}}]" *ngIf="page?.images">
+              <img class="card-img-top"  src="{{ page?.images }}" alt="{{ page?.titre }}"/>
+            </a>
+            <div class="card-body">
+              <p class="card-text">{{ page?.subContent }}</p>
+            </div>
           </div>
         </div>
       </div>
