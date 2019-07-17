@@ -7,7 +7,7 @@ export const SERVER = {
 export const ROUTESBACK = {
   Authentification: {
     getToken:'/authentication_token',
-    registration:'/registration',
+    registration:'/register',
     login: '/login'
   },
   Pages:{
@@ -16,7 +16,7 @@ export const ROUTESBACK = {
   },
   Users:{
     getOneUser: '/users/',
-    postOneUser: '/users',
+    postOneUser: '/register',
     updateUser: '/users/'
   },
 };

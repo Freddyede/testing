@@ -9,11 +9,11 @@
     <form novalidate>
       <div class="form-group text-center">
         <label for="nameRegistration">name</label>
-        <input required type="text" class="form-control" id="nameRegistration" name="mail" [(ngModel)]="registrationObject.name">
+        <input required type="text" class="form-control" id="nameRegistration" name="name" [(ngModel)]="registrationObject.name">
       </div>
       <div class="text-center form-group">
         <label for="usernameRegistration">User Name</label>
-        <input required type="text" class="form-control" id="usernameRegistration" name="mail" [(ngModel)]="registrationObject.username">
+        <input required type="text" class="form-control" id="usernameRegistration" name="username" [(ngModel)]="registrationObject.username">
       </div>
       <div class="text-center form-group">
         <label for="mailRegistration">Mail</label>
@@ -24,7 +24,7 @@
         <input required type="text" class="form-control" id="passwordRegistration" name="password" [(ngModel)]="registrationObject.password">
       </div>
       <div class="col-xs-12 text-center">
-        <button type="button" (click)="setValeurRegistration();registrationActive = false;">Submit</button>
+        <button type="button" (click)="setValeurRegistration(); registrationActive = false;">Submit</button>
       </div>
     </form>
   </div>
