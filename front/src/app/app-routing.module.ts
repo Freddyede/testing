@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './COMPONENTS/login/login.component';
-import { RegistrationComponent } from './COMPONENTS/registration/registration.component';
-import { HomePageComponent } from './COMPONENTS/home-page/home-page.component';
-import { PageDetailsComponent } from './UNDERCOMPONENTS/underUnderComponents/page-details/page-details.component';
-import {AccueilComponent} from './COMPONENTS/accueil/accueil.component';
-import { AuthGuard } from './GUARDS/auth.guard';
-import { AuthService } from './SERVICES/Auth.service';
-
+import {LoginComponent} from './components/login/login.component';
+import {RegistrationComponent} from './components/registration/registration.component';
+import {HomePageComponent} from './components/home-page/home-page.component';
+import {PageDetailsComponent} from './undercomponents/underUnderComponents/page-details/page-details.component';
+import {AccueilComponent} from './components/accueil/accueil.component';
+import {AuthGuard} from './guards/auth.guard';
+import {AuthService} from './services/Auth.service';
 const routes: Routes = [
   {path: 'pages/:id', component: PageDetailsComponent, canActivate: [AuthGuard]},
   {path: '', component: AccueilComponent},

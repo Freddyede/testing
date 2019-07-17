@@ -1,8 +1,14 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
+<<<<<<< HEAD:front/src/app/COMPONENTS/login/login.component.ts
 import { AuthService } from '../../SERVICES/Auth.service';
 import { TokenEntityService } from '../../SERVICES/tokenEntity.service';
+=======
+import {AuthService } from '../../services/Auth.service';
+import { TokenEntityService } from '../../services/tokenEntity.service';
+
+>>>>>>> develop:front/src/app/components/login/login.component.ts
 @Component({
   providers: [
     AuthService,

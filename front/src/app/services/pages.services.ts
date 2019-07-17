@@ -1,8 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+<<<<<<< HEAD:front/src/app/SERVICES/pages.services.ts
 import { IPages } from '../INTERFACES/IPages';
 import { SERVER, ROUTESBACK } from '../CONSTANTS/back.const';
+=======
+import { IPages } from '../interfaces/IPages';
+import { SERVER, ROUTESBACK } from '../constants/back.const';
+>>>>>>> develop:front/src/app/services/pages.services.ts
 @Injectable()
 
 export class PagesServices {

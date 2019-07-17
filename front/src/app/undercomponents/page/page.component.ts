@@ -1,6 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
+<<<<<<< HEAD:front/src/app/UNDERCOMPONENTS/page/page.component.ts
 import {PagesServices} from '../../SERVICES/pages.services';
 
+=======
+import {PagesServices} from '../../services/pages.services';
+>>>>>>> develop:front/src/app/undercomponents/page/page.component.ts
 @Component({
   providers:[PagesServices],
   selector: 'app-page',
