@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/utilisateur", name="back-office_")
  */
-class PagesController extends AbstractController {
+class PagesBackOfficeController extends AbstractController {
     private $titre = 'Pages';
     /**
      * @Route("/pages", name="pages_accueil")

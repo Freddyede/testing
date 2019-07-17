@@ -1,7 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
-
-
+import {ActivatedRoute, Router} from '@angular/router';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -15,10 +13,10 @@ export class NavbarComponent implements OnInit {
   affichePages: boolean;
   afficheLogin: boolean;
   afficheLogout: boolean;
-  constructor(private router: Router) { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
   ngOnInit() {
     if (this.titreNavbar === 'Error mode'){
-      console.log("erreur");
+      console.log('erreur');
     }
     if (localStorage.getItem('token') !== null) {
       this.afficheLogin = false;
