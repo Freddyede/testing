@@ -28,5 +28,13 @@ class AuthController extends AbstractController
         $em->flush();
     return new Response(sprintf('User %s successfully created', $user->getUsername()));
     }
+    /**
+    * @Route("/login", name="login_user", methods={"POST"})
+    */
+    public function login(Request $request, UserPasswordEncoderInterface $encoder) {
+        $data = json_decode($request->getContent());
+        $userInBase = $this->getDoctrine()->getRepository(Users::class)->findOneBy(['mail'=>$data->mail]);
+        return new Response($this->get('serializer')->serialize($userInBase,'json'));
+    }
 }
 ?>

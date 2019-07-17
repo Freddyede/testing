@@ -17,7 +17,6 @@ export class LoginComponent implements OnInit {
   title = 'Login';
   errorMessage: string;
   logged: boolean = false;
-  privateToken: boolean;
   @Output() notify: EventEmitter<object> = new EventEmitter();
   @Output() storages: EventEmitter<object> = new EventEmitter();
   loginObject: any = {};
@@ -27,15 +26,16 @@ export class LoginComponent implements OnInit {
       const password = this.loginObject.password;
       this.Auth.Login(mail, password).subscribe(data => {
         TokenEntityService.setToken(data);
+        this.router.navigate(['/pages']).then();
       });
     this.Auth.getUsers(mail, password).subscribe( data =>{
-      localStorage.setItem('idUser', JSON.stringify(data));
+      localStorage.setItem('idUser',JSON.stringify(data.id));
     });
     this.logged = true;
-    this.privateToken = !!localStorage.getItem('token');
   }
   deleteAlert() {
     this.errorMessage = null;
   }
-  ngOnInit() { }
+  ngOnInit() {
+  }
 }
