@@ -12,6 +12,7 @@ import { PageComponent } from './undercomponents/page/page.component';
 import { PageDetailsComponent } from './undercomponents/underUnderComponents/page-details/page-details.component';
 import { AccueilComponent } from './components/accueil/accueil.component';
 import { MessagesComponent } from './components/messages/messages.component';
+import { ContainerMessagesComponent } from './components/container-messages/container-messages.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { MessagesComponent } from './components/messages/messages.component';
     PageComponent,
     PageDetailsComponent,
     AccueilComponent,
-    MessagesComponent
+    MessagesComponent,
+    ContainerMessagesComponent
   ],
   imports: [
     BrowserModule,

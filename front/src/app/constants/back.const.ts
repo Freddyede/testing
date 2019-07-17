@@ -19,4 +19,8 @@ export const ROUTESBACK = {
     postOneUser: '/register',
     updateUser: '/users/'
   },
+  Messages: {
+    postMessage: '/messages',
+    getMessages:'/messages'
+  }
 };
