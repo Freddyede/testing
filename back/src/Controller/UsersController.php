@@ -4,7 +4,11 @@
 namespace App\Controller;
 
 
-class UsersController
-{
-
+class UsersController extends AbstractController {
+    /**
+     * @Route("/login", name="loginUser", method={"POST"})
+    */
+    public function login(Request $request) {
+            
+    }
 }
