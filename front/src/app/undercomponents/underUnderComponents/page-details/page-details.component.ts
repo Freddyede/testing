@@ -16,10 +16,7 @@ export class PageDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private pageService: PagesServices) { }
   ngOnInit() {
     this.id = Number(
-      this.route.snapshot.paramMap.get('id')
-        .split(',')[1]
-        .replace(/]$/, '')
-    );
+      this.route.snapshot.paramMap.get('id'));
     this.pageService.getPage(this.id).subscribe((data) => {
        if (!data.images.startsWith('https://')){
         data.images = 'https://img-0.journaldunet.com/YY8e7EtrRfdIfec9XwoXRcVylTI=/1280x/smart/67f08fc7bfa04fedbb78badd1df132b5/ccmcms-jdn/11048473.jpg';

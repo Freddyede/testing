@@ -13,7 +13,6 @@ export class PageComponent implements OnInit {
   constructor(private pageService: PagesServices) { }
   ngOnInit() {
     this.logged = true;
-    console.log(localStorage.getItem('idUser'));
     this.pageService.getPages().subscribe((data) => {
       for (let i = 0; i < data.length; i++){
         if (!data[i].images.startsWith('https://')){
