@@ -21,7 +21,7 @@ class Todo
     /**
      * @ORM\Column(type="integer")
      */
-    private $user_id;
+    private $userId;
 
     /**
      * @ORM\Column(type="text")
@@ -35,12 +35,12 @@ class Todo
 
     public function getUserId(): ?int
     {
-        return $this->user_id;
+        return $this->userId;
     }
 
-    public function setUserId(int $user_id): self
+    public function setUserId(int $userId): self
     {
-        $this->user_id = $user_id;
+        $this->userId = $userId;
 
         return $this;
     }
