@@ -1,3 +1,5 @@
-<p>
-  container-messages works!
-</p>
+<div class="col-xs-12 mt-5" style="border: 1px solid red;">
+<div *ngFor="let message of arrayMessage">
+  {{ message.content| json }}
+</div>
+</div>

@@ -7,7 +7,7 @@ import {ROUTESBACK, SERVER} from '../constants/back.const';
 export class MessagesService {
   constructor(private http: HttpClient) { }
 
-  postMessage(idUser,obj,token) {
+  postMessage(obj,token) {
     return this.http.post(SERVER.urlAPI+ROUTESBACK.Messages.postMessage,obj, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -15,7 +15,7 @@ export class MessagesService {
       })
     })
   }
-  findAllMessages(id){
-    return this.http.get(SERVER.url_get+ROUTESBACK.Messages.getMessages,{id});
+  findAllMessages(){
+    return this.http.get(SERVER.url_get+ROUTESBACK.Messages.getMessages);
   }
 }

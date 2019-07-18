@@ -12,9 +12,11 @@ export class ContainerMessagesComponent implements OnInit {
   constructor(private MessagesService: MessagesService) { }
   arrayMessage: any = [];
   ngOnInit() {
-    this.MessagesService.findAllMessages(localStorage.getItem('idUsers')).subscribe((data)=>{
+    this.MessagesService.findAllMessages().subscribe((data)=>{
       console.log(data);
-      this.arrayMessage.push(data);
+      for (let i = 0; i < data.length; i++){
+        this.arrayMessage.push(data[i]);
+      }
    });
   }
 
