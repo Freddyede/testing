@@ -8,19 +8,19 @@ import { SERVER, ROUTESBACK } from '../constants/back.const';
 export class PagesServices {
   constructor(private http: HttpClient) {}
 
-  getPages(): Observable <IPages> {
+  getPages(token): Observable <IPages> {
     return this.http.get<IPages>(SERVER.url_get + ROUTESBACK.Pages.getAllPage,  {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization' : localStorage.getItem('token')
+        'Authorization' : token
       })
     });
   }
-  getPage(id): Observable <IPages> {
+  getPage(id,token): Observable <IPages> {
     return this.http.get<IPages>(SERVER.urlAPI+ ROUTESBACK.Pages.getOnePage + id, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('token')
+        'Authorization': token
       })
     });
   }

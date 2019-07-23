@@ -11,6 +11,8 @@ import { NavbarComponent } from './undercomponents/navbar/navbar.component';
 import { PageComponent } from './undercomponents/page/page.component';
 import { PageDetailsComponent } from './undercomponents/underUnderComponents/page-details/page-details.component';
 import { AccueilComponent } from './components/accueil/accueil.component';
+import { MessagesComponent } from './components/messages/messages.component';
+import { SendingMessagesComponent } from './components/sending-messages/sending-messages.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,9 @@ import { AccueilComponent } from './components/accueil/accueil.component';
     NavbarComponent,
     PageComponent,
     PageDetailsComponent,
-    AccueilComponent
+    AccueilComponent,
+    MessagesComponent,
+    SendingMessagesComponent
   ],
   imports: [
     BrowserModule,
