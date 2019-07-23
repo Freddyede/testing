@@ -18,7 +18,7 @@ export class PageComponent implements OnInit {
   constructor(private pageService: PagesServices) { }
   ngOnInit() {
     this.logged = true;
-    this.pageService.getPages().subscribe((data) => {
+    this.pageService.getPages(localStorage.getItem('token')).subscribe((data) => {
       for (let i = 0; i < data.length; i++){
         if (!data[i].images.startsWith('https://')){
           data[i].images = 'https://img-0.journaldunet.com/YY8e7EtrRfdIfec9XwoXRcVylTI=/1280x/smart/67f08fc7bfa04fedbb78badd1df132b5/ccmcms-jdn/11048473.jpg';
