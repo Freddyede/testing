@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+
 @Component({
-  selector: 'app-messages',
-  templateUrl: './messages.component.html',
-  styleUrls: ['./messages.component.scss']
+  selector: 'app-todos',
+  templateUrl: './todos.component.html',
+  styleUrls: ['./todos.component.scss']
 })
-export class MessagesComponent implements OnInit {
+export class TodosComponent implements OnInit {
   privateToken: string;
   title: string;
   constructor() { }
 
   ngOnInit() {
-    this.title = 'Messages';
+    this.title = 'Tasks';
     this.privateToken = localStorage.getItem('token');
-
   }
 
 }
