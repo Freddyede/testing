@@ -1,9 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-<<<<<<< HEAD:front/src/app/COMPONENTS/registration/registration.component.ts
-import { AuthService } from '../../SERVICES/Auth.service';
-=======
 import {AuthService} from '../../services/Auth.service';
->>>>>>> develop:front/src/app/components/registration/registration.component.ts
 import {Router} from '@angular/router';
 
 // @ts-ignore
