@@ -12,7 +12,7 @@ export const ROUTESBACK = {
   },
   Pages:{
     getAllPage: '/pages',
-    getOnePage: '/pages/'
+    getOnePage: '/pages/',
   },
   Users:{
     getOneUser: '/users/',
