@@ -1,6 +1,13 @@
+<div class="col-xs-12 mt-5" style="border: 1px solid red;">
+  <div *ngFor="let message of arrayMessage">
+    {{ message.content }}
+  </div>
+</div>
 <div class="col-xs-12 mt-5">
   <div class="form-group text-center">
-      <input type="text" class="form-control mt-5" id="exampleCheck1" name="content" [(ngModel)]="messages"/>
+      <textarea class="form-control mt-5 text-center"
+        placeholder="Veuillez entrez votre message ici..."
+        name="content" [(ngModel)]="messages.content"></textarea>
       <button (click)="sendMessage()" class="mt-5">Submit</button>
     </div>
 </div>

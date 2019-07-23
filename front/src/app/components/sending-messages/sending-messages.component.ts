@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MessagesService} from '../../services/messages.service';
 
 @Component({
@@ -9,15 +9,27 @@ import {MessagesService} from '../../services/messages.service';
 })
 export class SendingMessagesComponent implements OnInit {
   messages: any = {};
+  arrayMessage: any;
   constructor(private MessagesServices: MessagesService) { }
   sendMessage(){
     const obj = {
-      users: JSON.stringify(localStorage.getItem('idUser')),
-      content: this.messages.content
+      users: 'api/users/'+localStorage.getItem('idUser'),
+      content: this.messages.content,
+      token: localStorage.getItem('token')
     };
-    this.MessagesServices.postMessage(obj,localStorage.getItem('token')).subscribe();
+    this.MessagesServices.postMessage(obj).subscribe(()=>{
+      this.MessagesServices.findAllMessages().subscribe(()=>{
+        this.MessagesServices.findAllMessages().subscribe((data)=>{
+          this.arrayMessage = data;
+          this.messages.content = '';
+        });
+      })
+    });
   }
   ngOnInit() {
+    this.MessagesServices.findAllMessages().subscribe((data)=>{
+      this.arrayMessage = data;
+   });
   }
 
 }

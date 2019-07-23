@@ -12,7 +12,6 @@ import { PageComponent } from './undercomponents/page/page.component';
 import { PageDetailsComponent } from './undercomponents/underUnderComponents/page-details/page-details.component';
 import { AccueilComponent } from './components/accueil/accueil.component';
 import { MessagesComponent } from './components/messages/messages.component';
-import { ContainerMessagesComponent } from './components/container-messages/container-messages.component';
 import { SendingMessagesComponent } from './components/sending-messages/sending-messages.component';
 @NgModule({
   declarations: [
@@ -25,7 +24,6 @@ import { SendingMessagesComponent } from './components/sending-messages/sending-
     PageDetailsComponent,
     AccueilComponent,
     MessagesComponent,
-    ContainerMessagesComponent,
     SendingMessagesComponent
   ],
   imports: [
