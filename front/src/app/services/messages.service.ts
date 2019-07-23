@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ROUTESBACK, SERVER } from '../.gitignore/constants/back.const';
+import { ROUTESBACK, SERVER } from '../constants/back.const';
 
 @Injectable({
   providedIn: 'root'

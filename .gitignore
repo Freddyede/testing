@@ -1,2 +1,2 @@
 back/encode\.sh
-front/src/app/.gitignore/constants\.ts
+front/src/app/constants/
