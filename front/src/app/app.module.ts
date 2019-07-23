@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {NgxAutoScrollModule} from "ngx-auto-scroll";
+
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +15,7 @@ import { PageDetailsComponent } from './undercomponents/underUnderComponents/pag
 import { AccueilComponent } from './components/accueil/accueil.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { SendingMessagesComponent } from './components/sending-messages/sending-messages.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +31,7 @@ import { SendingMessagesComponent } from './components/sending-messages/sending-
   ],
   imports: [
     BrowserModule,
+    NgxAutoScrollModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule

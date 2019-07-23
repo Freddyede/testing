@@ -29,7 +29,6 @@ export class SendingMessagesComponent implements OnInit {
   ngOnInit() {
     this.MessagesServices.findAllMessages().subscribe((data)=>{
       this.arrayMessage = data;
-   });
+    });
   }
-
 }
