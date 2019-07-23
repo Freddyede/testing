@@ -11,7 +11,7 @@ export class TodosComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.title = 'Todos';
+    this.title = 'Tasks';
     this.privateToken = localStorage.getItem('token');
   }
 
