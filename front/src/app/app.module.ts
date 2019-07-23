@@ -15,6 +15,7 @@ import { PageDetailsComponent } from './undercomponents/underUnderComponents/pag
 import { AccueilComponent } from './components/accueil/accueil.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { SendingMessagesComponent } from './components/sending-messages/sending-messages.component';
+import { TodosComponent } from './components/todos/todos.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SendingMessagesComponent } from './components/sending-messages/sending-
     PageDetailsComponent,
     AccueilComponent,
     MessagesComponent,
-    SendingMessagesComponent
+    SendingMessagesComponent,
+    TodosComponent
   ],
   imports: [
     BrowserModule,
