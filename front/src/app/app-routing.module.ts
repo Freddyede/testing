@@ -11,9 +11,9 @@ import {MessagesComponent} from './components/messages/messages.component';
 import {TodosComponent} from './components/todos/todos.component';
 import {UpdateTodosComponent} from './undercomponents/update-todos/update-todos.component';
 const routes: Routes = [
-  { path: 'pages/:id', component: PageDetailsComponent, canActivate: [AuthGuard] },
+  { path: 'news/:id', component: PageDetailsComponent, canActivate: [AuthGuard] },
   { path: '', component: AccueilComponent },
-  { path: 'pages', component: HomePageComponent, canActivate: [AuthGuard] },
+  { path: 'news', component: HomePageComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: 'messages', component: MessagesComponent, canActivate: [AuthGuard] },
