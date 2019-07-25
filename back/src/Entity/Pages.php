@@ -47,7 +47,6 @@ class Pages
      * @ORM\Column(type="string", length=255)
      */
     private $subContent;
-
     public function getId(): ?int
     {
         return $this->id;

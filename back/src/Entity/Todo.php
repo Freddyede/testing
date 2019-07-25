@@ -19,32 +19,20 @@ class Todo
     private $id;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $userId;
-
-    /**
      * @ORM\Column(type="text")
      */
     private $tasks;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Users", inversedBy="todos")
+     */
+    private $idUser;
 
     public function getId(): ?int
     {
         return $this->id;
     }
-
-    public function getUserId(): ?int
-    {
-        return $this->userId;
-    }
-
-    public function setUserId(int $userId): self
-    {
-        $this->userId = $userId;
-
-        return $this;
-    }
-
+    
     public function getTasks(): ?string
     {
         return $this->tasks;
@@ -53,6 +41,18 @@ class Todo
     public function setTasks(string $tasks): self
     {
         $this->tasks = $tasks;
+
+        return $this;
+    }
+
+    public function getIdUser(): ?Users
+    {
+        return $this->idUser;
+    }
+
+    public function setIdUser(?Users $idUser): self
+    {
+        $this->idUser = $idUser;
 
         return $this;
     }

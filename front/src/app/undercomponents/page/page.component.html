@@ -1,17 +1,15 @@
-<div class="col-12">
-  <app-navbar [titreNavbar]="this.title" [logged]="logged"></app-navbar>
-</div>
+<app-navbar [titreNavbar]="this.title" [logged]="logged"></app-navbar>
  <div class="container mb-5">
   <div class="container-fluid" *ngIf="logged">
     <div class="col-12">
       <div class="row">
-        <div class="col-md-6" *ngFor="let page of pages">
+        <div class="col-6" *ngFor="let page of pages">
           <div class="card" style="width: 18rem;">
             <a [routerLink]="['/pages',page?.id]" *ngIf="page?.images">
               <img class="card-img-top"  src="{{ page?.images }}" alt="{{ page?.titre }}"/>
             </a>
             <div class="card-body">
-              <p class="card-text">{{ page?.subContent }}</p>
+              <p class="card-text_{{page?.id}}">{{ page?.subContent }}</p>
             </div>
           </div>
         </div>

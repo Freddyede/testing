@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PagesFrontOfficeController extends abstractController {
     /**
-    * @Route("/pages", name="pages_front", methods={"GET"})
+    * @Route("/pages",name="return_all_messages", methods={"GET"})
     */
     public function getAllPages(){
         $pages = $this->getDoctrine()->getRepository(Pages::class)->findAll();

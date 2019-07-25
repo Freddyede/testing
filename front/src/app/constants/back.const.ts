@@ -11,12 +11,23 @@ export const ROUTESBACK = {
   Users: {
     postOneUser:"/register"
   },
-  Messages:{
+  Messages: {
     postMessage: '/messages',
     getMessages: '/messages',
   },
-  Pages:{
+  Pages: {
     getOnePage:'/pages/',
-    getAllPage: '/pages'
+    getAllPage: '/pages',
+    findByTitre:'/searchByTitre'
+  },
+  Todos: {
+    postTodos: '/todos',
+    getTodos: '/getTodosByIdUsers',
+    updateTodos:'/todos/',
+    deleteTodos:'/todos/',
+    getTask:'/todos/'
+  },
+  users: {
+    getOneUser: '/users/'
   }
 };

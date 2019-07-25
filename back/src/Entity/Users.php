@@ -45,9 +45,15 @@ class Users implements UserInterface {
      */
     private $message;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Todo", mappedBy="idUser")
+     */
+    private $todos;
+
     public function __construct()
     {
         $this->message = new ArrayCollection();
+        $this->todos = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -145,4 +151,35 @@ class Users implements UserInterface {
     public function getSalt(){ }
 
     public function eraseCredentials() { }
+
+    /**
+     * @return Collection|Todo[]
+     */
+    public function getTodos(): Collection
+    {
+        return $this->todos;
+    }
+
+    public function addTodo(Todo $todo): self
+    {
+        if (!$this->todos->contains($todo)) {
+            $this->todos[] = $todo;
+            $todo->setIdUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTodo(Todo $todo): self
+    {
+        if ($this->todos->contains($todo)) {
+            $this->todos->removeElement($todo);
+            // set the owning side to null (unless already changed)
+            if ($todo->getIdUser() === $this) {
+                $todo->setIdUser(null);
+            }
+        }
+
+        return $this;
+    }
 }

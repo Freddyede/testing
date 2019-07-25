@@ -16,6 +16,7 @@ import { AccueilComponent } from './components/accueil/accueil.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { SendingMessagesComponent } from './components/sending-messages/sending-messages.component';
 import { TodosComponent } from './components/todos/todos.component';
+import { UpdateTodosComponent } from './undercomponents/update-todos/update-todos.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TodosComponent } from './components/todos/todos.component';
     AccueilComponent,
     MessagesComponent,
     SendingMessagesComponent,
-    TodosComponent
+    TodosComponent,
+    UpdateTodosComponent
   ],
   imports: [
     BrowserModule,
