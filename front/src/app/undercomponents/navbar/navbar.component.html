@@ -19,12 +19,6 @@
         <a routerLink="/todos" class="nav-link">Tasks</a>
       </li>
     </ul>
-    <div *ngIf="titreNavbar === 'Pages'">
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" name="titre" aria-label="Search" [(ngModel)]="search.titre"/>
-        <button class="btn btn-outline-success my-2 my-sm-0" (click)="searchBar()" type="submit">Search</button>
-      </form>
-    </div>
     <div *ngIf="!logged" class="offset-1">
       <a routerLink="/login"><button (click)="getToken()" class="btn btn-success">Login</button></a>
     </div>
