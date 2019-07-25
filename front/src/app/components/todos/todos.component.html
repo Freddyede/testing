@@ -28,8 +28,9 @@
         </div>
       </div>
     </div>
-    <div class="col-12 text-center" id="todos" *ngFor="let todo of todos">
-      {{ todo | json }}
+    <div class="col-12 text-center" id="todos">
+      *ngFor="let todo of arrayTasks"
+
     </div>
   </div>
 </div>

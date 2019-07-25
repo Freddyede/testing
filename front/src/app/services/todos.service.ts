@@ -16,4 +16,7 @@ export class TodosService {
       })
     })
   }
+  findAllTodos(obj) {
+    return this.http.get(SERVER.url_get+ROUTESBACK.Todos.getTodos+obj);
+  }
 }
