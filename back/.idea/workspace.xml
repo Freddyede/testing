@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7ce54c7-d766-4212-a447-0b6f1d2822f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Controller/PagesFrontOfficeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PagesFrontOfficeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Pages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/PagesType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PagesType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/components/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/navbar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/components/accueil/accueil.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/components/accueil/accueil.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/components/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/components/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/components/messages/messages.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/components/messages/messages.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/components/registration/registration.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/components/registration/registration.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/components/todos/todos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/components/todos/todos.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/components/todos/todos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/components/todos/todos.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/constants/back.const.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/constants/back.const.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/undercomponents/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/undercomponents/navbar/navbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/undercomponents/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/undercomponents/navbar/navbar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/undercomponents/page/page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/undercomponents/page/page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/undercomponents/page/page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/undercomponents/page/page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/undercomponents/underUnderComponents/page-details/page-details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/undercomponents/underUnderComponents/page-details/page-details.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/EntityTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/EntityTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
