@@ -10,7 +10,6 @@ export class PageComponent implements OnInit {
   @Input() pages: object;
   title = 'Pages';
   logged = false;
-  click: number;
   constructor(private pageService: PagesServices) { }
   ngOnInit() {
     this.logged = true;

@@ -1,7 +1,15 @@
 <app-navbar [titreNavbar]="this.title" [logged]="logged"></app-navbar>
-<p *ngIf="logged">
 
-</p>
+<div class="col-12" *ngIf="logged" style="border:1px solid red;">
+  <p *ngIf="logged">
+    cd
+  </p>
+</div>
+<div class="row" *ngIf="!logged" style="border:1px solid black;">
+  <div class="col-12">
+
+  </div>
+</div>
 <div class="col-xs-12 text-center">
   <h6 id="footer">&copy; Tous droits réservés</h6>
 </div>

@@ -11,16 +11,14 @@ export class TodosComponent implements OnInit {
   privateToken: string;
   newTodos: any = {};
   title: string;
-  arrayTasks: any = [];
-
+  arrayTasksObj: any;
   constructor(private serviceTodos: TodosService) { }
 
   ngOnInit() {
     this.title = 'Tasks';
     this.privateToken = localStorage.getItem('token');
     this.serviceTodos.findAllTodos(localStorage.getItem('idUser')).subscribe((data) => {
-      this.arrayTasks.push(data);
-      this.newTodos.tasks = '';
+      this.arrayTasksObj = data;
     });
   }
   sendNewTask(){
@@ -28,11 +26,17 @@ export class TodosComponent implements OnInit {
       tasks: this.newTodos.tasks,
       idUser: 'api/users/'+localStorage.getItem('idUser')
     };
+    localStorage.setItem('IRI_user','api/users/'+localStorage.getItem('idUser'));
     this.serviceTodos.sendNewTask(obj,localStorage.getItem('token')).subscribe(()=> {
       this.serviceTodos.findAllTodos(localStorage.getItem('idUser')).subscribe((data) => {
-        this.arrayTasks.push(data);
+        this.arrayTasksObj = data;
         this.newTodos.tasks = '';
       });
+    });
+  }
+  deleteTask(id){
+    this.serviceTodos.deleteTodos(id,localStorage.getItem('token')).subscribe(()=>{
+      this.ngOnInit();
     });
   }
 }

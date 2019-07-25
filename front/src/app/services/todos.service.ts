@@ -16,7 +16,26 @@ export class TodosService {
       })
     })
   }
+  findTodo(id){
+    return this.http.get(SERVER.url_get+ROUTESBACK.Todos.getTask+id);
+  }
   findAllTodos(obj) {
-    return this.http.get(SERVER.url_get+ROUTESBACK.Todos.getTodos+obj);
+    return this.http.get(SERVER.url_get+ROUTESBACK.Todos.getTodos+'/'+obj);
+  }
+  updateTodos(id,obj,token){
+    return this.http.put(SERVER.urlAPI+ROUTESBACK.Todos.updateTodos+id,obj,{
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':token
+      })
+    })
+  }
+  deleteTodos(id,token){
+    return this.http.delete(SERVER.urlAPI+ROUTESBACK.Todos.deleteTodos+id, {
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':token
+      })
+    })
   }
 }

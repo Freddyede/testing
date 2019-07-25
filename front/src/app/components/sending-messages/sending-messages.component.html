@@ -1,14 +1,21 @@
-<div ngx-auto-scroll lock-y-offset="200" observe-attributes
-  class="col-xs-12 mt-5 hauteurMessage" id="containerMessage" style="border: 1px solid red;">
-  <div *ngFor="let message of arrayMessage">
-    {{ message.content }}
-  </div>
-</div>
-<div class="col-xs-12 mt-5">
-  <div class="form-group text-center">
-      <textarea class="form-control mt-5 text-center"
-        placeholder="Veuillez entrez votre message ici..."
-        name="content" [(ngModel)]="messages.content"></textarea>
-      <button (click)="sendMessage()" class="mt-5">Submit</button>
+<div class="row">
+  <div ngx-auto-scroll lock-y-offset="200" observe-attributes
+       class="col-12 mt-5 hauteurMessage" id="containerMessage" style="border: 1px solid red;">
+    <div *ngFor="let message of arrayMessage">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">{{ message.users?.name }}</h5>
+          <p class="card-text text-center">{{ message?.content }}</p>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="col-12 mt-5">
+    <div class="form-group text-center">
+      <textarea class="form-control mt-5 text-center"
+                placeholder="Veuillez entrez votre message ici..."
+                name="content" [(ngModel)]="messages.content"></textarea>
+      <button (click)="sendMessage()" type="button" class="mt-5 btn btn-success">Envoyer un message</button>
+    </div>
+  </div>
 </div>

@@ -9,6 +9,7 @@ import {AuthGuard} from './guards/auth.guard';
 import {AuthService} from './services/Auth.service';
 import {MessagesComponent} from './components/messages/messages.component';
 import {TodosComponent} from './components/todos/todos.component';
+import {UpdateTodosComponent} from './undercomponents/update-todos/update-todos.component';
 const routes: Routes = [
   { path: 'pages/:id', component: PageDetailsComponent, canActivate: [AuthGuard] },
   { path: '', component: AccueilComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: 'messages', component: MessagesComponent, canActivate: [AuthGuard] },
-  { path: 'todos', component:TodosComponent, canActivate: [AuthGuard] }
+  { path: 'todos', component:TodosComponent, canActivate: [AuthGuard] },
+  { path: 'todos/:id', component:UpdateTodosComponent, canActivate:[AuthGuard] }
 ];
 @NgModule({
   providers: [AuthService, AuthGuard],

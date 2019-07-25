@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MessagesApiController extends AbstractController {
     /**
-     * @Route("/messages",name="return_all_messages", methods={"GET"})
+     * @Route("/messages", name="get_all_messages", methods={"GET"})
      */
     public function getAllMessage(Request $request){
         $data = json_decode($request->getContent());

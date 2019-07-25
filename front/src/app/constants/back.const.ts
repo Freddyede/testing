@@ -24,7 +24,8 @@ export const ROUTESBACK = {
     postTodos: '/todos',
     getTodos: '/getTodosByIdUsers',
     updateTodos:'/todos/',
-    deleteTodos:'/todos/'
+    deleteTodos:'/todos/',
+    getTask:'/todos/'
   },
   users: {
     getOneUser: '/users/'

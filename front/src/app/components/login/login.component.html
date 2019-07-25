@@ -3,17 +3,17 @@
   <div class="alert alert-danger" *ngIf="errorMessage" role="alert">
     {{ errorMessage }}
   </div>
-  <form novalidate method="POST">
+  <form novalidate method="POST" id="forms-login">
     <div class="text-center form-group">
       <label for="mail">Mail</label>
-      <input (click)="deleteAlert()" type="mail" required class="form-control" id="mail" name="mail" [(ngModel)]="loginObject.mail"/>
+      <input type="mail" required class="form-control" id="mail" name="mail" [(ngModel)]="loginObject.mail"/>
     </div>
     <div class="text-center form-group">
       <label for="password">Password</label>
       <input type="password" required class="form-control" id="password" name="password" [(ngModel)]="loginObject.password"/>
     </div>
     <div class="col-xs-12 text-center">
-      <button type="button" (click)="setLogin()" *ngIf="!privateToken">Submit</button>
+      <button type="button" id="buttonSubmit" (click)="setLogin()" *ngIf="!privateToken">Submit</button>
     </div>
   </form>
   <div class="col-xs-12 mt-5 text-center">

@@ -1,0 +1,11 @@
+<app-navbar [titreNavbar]="this.title" [logged]="privateToken"></app-navbar>
+<div class="col-12">
+  <form>
+    <div class="form-group text-center">
+      <input type="text" class="form-control text-center" name="tasks" [(ngModel)]="updateTodos.tasks" value="{{ task }}"/>
+    </div>
+    <div class="form-group text-center">
+      <button type="button" (click)="updateTasks(updateTodos)" class="btn btn-success">Modifier la tâche</button>
+    </div>
+  </form>
+</div>

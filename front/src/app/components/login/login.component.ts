@@ -31,10 +31,7 @@ export class LoginComponent implements OnInit {
     this.Auth.getUsers(mail, password).subscribe( data =>{
       localStorage.setItem('idUser',JSON.stringify(data.id));
     });
-    this.logged = true;
-  }
-  deleteAlert() {
-    this.errorMessage = null;
+    return this.logged = true;
   }
   ngOnInit() {
   }

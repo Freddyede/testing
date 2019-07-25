@@ -18,7 +18,7 @@
               </button>
             </div>
             <div class="modal-body text-center">
-                  <textarea name="tasks" [(ngModel)]="newTodos.tasks" id="" cols="30" rows="10"></textarea>
+                  <textarea name="tasks" [(ngModel)]="newTodos.tasks" class="form-control" cols="30" rows="10"></textarea>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -28,9 +28,25 @@
         </div>
       </div>
     </div>
-    <div class="col-12 text-center" id="todos">
-      *ngFor="let todo of arrayTasks"
-
+    <div class="col-12 col-md-12 col-lg-12 mt-5" style="border:1px solid red;">
+      <div class="row">
+        <div class="col-12 col-lg-12  col-xl-3 mt-2 mb-1" *ngFor="let todo of arrayTasksObj">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center">{{ todo.users?.name }}</h5>
+              <p class="card-text text-center">{{ todo?.messages }}</p>
+              <div class="row">
+                <div class="col-12 text-center col-md-12 col-lg-6">
+                  <a [routerLink]="['/todos',todo?.id]" class="btn btn-info">Modification</a>
+                </div>
+                <div class="col-12 text-center col-md-12 col-lg-6">
+                  <button (click)="deleteTask(todo?.id)" class="btn btn-danger">Suppression</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

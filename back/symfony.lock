@@ -16,6 +16,9 @@
             "src/Entity/.gitignore"
         ]
     },
+    "behat/transliterator": {
+        "version": "v1.2.0"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -115,6 +118,9 @@
     },
     "fig/link-util": {
         "version": "1.0.0"
+    },
+    "gedmo/doctrine-extensions": {
+        "version": "v2.4.37"
     },
     "harmbandstra/swagger-ui-bundle": {
         "version": "4.1.0"

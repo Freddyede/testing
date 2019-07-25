@@ -13,13 +13,20 @@ class TodosFrontOfficeController extends abstractController {
     /**
     * @Route("/getTodosByIdUsers/{id}", name="pages_front", methods={"GET"})
     */
-    public function getAllPages($id){
-        $arrayData = [];
+    public function getTodosByIdUsers($id){
+        $arrayData = null;
         $todo = $this->getDoctrine()->getRepository(Todo::class)->findBy(['idUser'=>$id]);
         $user = $this->getDoctrine()->getRepository(Users::class)->find($id);
-        foreach ($todo as $value) { 
-            $arrayData[] = array('messages'=>array($value->getTasks()),'users'=>$user);
-        }
+        foreach ($todo as $value) {
+            $arrayData[] = array('id'=>$value->getId(),'messages'=>$value->getTasks(),'users'=>$user);
+        };
         return new Response($this->get('serializer')->serialize($arrayData,'json'));
+    }
+    /**
+    * @Route("/todos/{id}", name="find_a_todo", methods={"GET"})
+    */
+    public function findBy($id){
+        $todo = $this->getDoctrine()->getRepository(Todo::class)->find($id)->getTasks();
+        return new Response($this->get('serializer')->serialize($todo,'json'));
     }
 }
