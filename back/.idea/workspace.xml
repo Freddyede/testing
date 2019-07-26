@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7ce54c7-d766-4212-a447-0b6f1d2822f7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/back.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/back.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BackOfficeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BackOfficeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MessagesApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MessagesApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PagesBackOfficeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PagesBackOfficeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PagesFrontOfficeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PagesFrontOfficeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/TodosFrontOfficeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TodoFrontOfficeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerHWZZsIh/getTodosFrontOfficeControllerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/ContainerHWZZsIh/getTodosFrontOfficeControllerService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRIcKje8/getTodosFrontOfficeControllerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/ContainerRIcKje8/getTodosFrontOfficeControllerService.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,6 +153,8 @@
       <path value="$PROJECT_DIR$/vendor/namshi/jose" />
       <path value="$PROJECT_DIR$/vendor/swagger-api/swagger-ui" />
       <path value="$PROJECT_DIR$/vendor/harmbandstra/swagger-ui-bundle" />
+      <path value="$PROJECT_DIR$/vendor/behat/transliterator" />
+      <path value="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -151,6 +163,7 @@
     <option name="width" value="1370" />
     <option name="height" value="1055" />
   </component>
+  <component name="ProjectId" id="1OWh1ihFfsbbxCmk5iayQi5shrs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -223,6 +236,7 @@
       <workItem from="1561041120422" duration="1771000" />
       <workItem from="1563882224448" duration="351000" />
       <workItem from="1563888591675" duration="199000" />
+      <workItem from="1564099052253" duration="548000" />
     </task>
     <servers />
   </component>
@@ -246,6 +260,17 @@
         <option value="3" />
         <option value="1" />
       </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
     </option>
   </component>
 </project>

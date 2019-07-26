@@ -3,14 +3,17 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class BackOfficeController extends AbstractController
 {
     private $directory = 'Back/';
+
     /**
-    * @Route("/utilisateur", name="back_office")
-    */
+     * @Route("/utilisateur", name="back_office")
+     * @return Response
+     */
     public function index(){
         return $this->render($this->directory.'index.html.twig', [
             'titre' => null,
