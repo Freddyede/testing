@@ -5,15 +5,17 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Entity\Todo;
 use App\Entity\Users;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class TodosFrontOfficeController extends abstractController {
+class TodoFrontOfficeController extends abstractController {
+
     /**
-    * @Route("/getTodosByIdUsers/{id}", name="pages_front", methods={"GET"})
-    */
-    public function getTodosByIdUsers($id){
+     * @Route("/getTodosByIdUsers/{id}", name="pages_front", methods={"GET"})
+     * @param $id
+     * @return Response
+     */
+    public function getTodoByIdUsers($id){
         $arrayData = null;
         $todo = $this->getDoctrine()->getRepository(Todo::class)->findBy(['idUser'=>$id]);
         $user = $this->getDoctrine()->getRepository(Users::class)->find($id);
@@ -22,9 +24,12 @@ class TodosFrontOfficeController extends abstractController {
         };
         return new Response($this->get('serializer')->serialize($arrayData,'json'));
     }
+
     /**
-    * @Route("/todos/{id}", name="find_a_todo", methods={"GET"})
-    */
+     * @Route("/todos/{id}", name="find_a_todo", methods={"GET"})
+     * @param $id
+     * @return Response
+     */
     public function findBy($id){
         $todo = $this->getDoctrine()->getRepository(Todo::class)->find($id)->getTasks();
         return new Response($this->get('serializer')->serialize($todo,'json'));

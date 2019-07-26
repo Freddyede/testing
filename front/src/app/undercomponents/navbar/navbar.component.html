@@ -10,7 +10,7 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/pages">Pages</a>
+        <a class="nav-link" routerLink="/news">News</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/messages">Messages</a>
@@ -19,12 +19,6 @@
         <a routerLink="/todos" class="nav-link">Tasks</a>
       </li>
     </ul>
-    <div *ngIf="titreNavbar === 'Pages'">
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" name="titre" aria-label="Search" [(ngModel)]="search.titre"/>
-        <button class="btn btn-outline-success my-2 my-sm-0" (click)="searchBar()" type="submit">Search</button>
-      </form>
-    </div>
     <div *ngIf="!logged" class="offset-1">
       <a routerLink="/login"><button (click)="getToken()" class="btn btn-success">Login</button></a>
     </div>

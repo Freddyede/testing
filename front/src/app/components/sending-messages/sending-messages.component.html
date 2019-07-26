@@ -1,11 +1,11 @@
 <div class="row">
   <div ngx-auto-scroll lock-y-offset="200" observe-attributes
-       class="col-12 mt-5 hauteurMessage" id="containerMessage" style="border: 1px solid red;">
+       class="col-12 col-sm-10 offset-sm-1 mt-5 hauteurMessage">
     <div *ngFor="let message of arrayMessage">
-      <div class="card">
+      <div class="card" id="cards">
         <div class="card-body">
-          <h5 class="card-title text-center">{{ message.users?.name }}</h5>
-          <p class="card-text text-center">{{ message?.content }}</p>
+          <h5 class="card-title text-center">Users : {{ message.users?.name }}</h5>
+          <p class="card-text text-center">Messages : {{ message?.content }}</p>
         </div>
       </div>
     </div>

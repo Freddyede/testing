@@ -1,4 +1,12 @@
 .hauteurMessage {
   height: 200px;
   overflow-y: scroll;
+  box-shadow: 10px 10px 10px #cccccc;
+  background-color: black;
+}
+
+#cards {
+  width:95%;
+  margin:auto;
+  background-color: #cccccc;
 }

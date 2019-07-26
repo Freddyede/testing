@@ -50,22 +50,35 @@ class Users implements UserInterface {
      */
     private $todos;
 
+    /**
+     * Users constructor.
+     */
     public function __construct()
     {
         $this->message = new ArrayCollection();
         $this->todos = new ArrayCollection();
     }
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getName(): ?string
     {
         return $this->name;
     }
 
+    /**
+     * @param string $name
+     * @return $this
+     */
     public function setName(string $name)
     {
         $this->name = $name;
@@ -73,11 +86,18 @@ class Users implements UserInterface {
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getUsername(): ?string
     {
         return $this->username;
     }
 
+    /**
+     * @param string $username
+     * @return $this
+     */
     public function setUsername(string $username)
     {
         $this->username = $username;
@@ -85,11 +105,18 @@ class Users implements UserInterface {
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getMail(): ?string
     {
         return $this->mail;
     }
 
+    /**
+     * @param string $mail
+     * @return $this
+     */
     public function setMail(string $mail)
     {
         $this->mail = $mail;
@@ -123,6 +150,10 @@ class Users implements UserInterface {
         return $this->message;
     }
 
+    /**
+     * @param Messages $message
+     * @return $this
+     */
     public function addMessage(Messages $message)
     {
         if (!$this->message->contains($message)) {
@@ -133,6 +164,10 @@ class Users implements UserInterface {
         return $this;
     }
 
+    /**
+     * @param Messages $message
+     * @return $this
+     */
     public function removeMessage(Messages $message)
     {
         if ($this->message->contains($message)) {
@@ -145,9 +180,17 @@ class Users implements UserInterface {
 
         return $this;
     }
+
+    /**
+     * @return array
+     */
     public function getRoles(){
         return ["ROLE_USER"];
     }
+
+    /**
+     * @return string|void|null
+     */
     public function getSalt(){ }
 
     public function eraseCredentials() { }
@@ -160,6 +203,10 @@ class Users implements UserInterface {
         return $this->todos;
     }
 
+    /**
+     * @param Todo $todo
+     * @return Users
+     */
     public function addTodo(Todo $todo): self
     {
         if (!$this->todos->contains($todo)) {
@@ -170,6 +217,10 @@ class Users implements UserInterface {
         return $this;
     }
 
+    /**
+     * @param Todo $todo
+     * @return Users
+     */
     public function removeTodo(Todo $todo): self
     {
         if ($this->todos->contains($todo)) {

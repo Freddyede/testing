@@ -1,12 +1,21 @@
 <app-navbar [titreNavbar]="this.title" [logged]="logged"></app-navbar>
 <div class="col-12">
   <div class="row">
-    <div class="card mx-auto mb-5" style="width: 18rem;">
-      <img class="card-img-top" src="{{ objectPage?.images }}" alt="test"/>
-      <div class="card-body">
-        <h1 class="card-title">{{ objectPage?.titre }}</h1>
-        <h2 class="card-text">{{ objectPage?.content }}</h2>
-      </div>
+    <div class="col-12">
+      <h1 class="text-center">{{ objectPage?.titre }}</h1>
+    </div>
+    <div class="col-12 text-center">
+      <img src="{{ objectPage?.images }}" style="width: 50%;" alt="{{objectPage?.content}}" class="card-img-top">
+    </div>
+    <div class="col-12">
+      <h2 class="text-center">
+        {{ objectPage?.content }}
+      </h2>
+    </div>
+    <div class="col-12">
+      <h4 class="text-center">
+        <a href="{{ objectPage?.hyperLink }}" target="_BLANK">{{ objectPage?.hyperLinkContent }}</a>
+      </h4>
     </div>
   </div>
 </div>

@@ -10,7 +10,7 @@ import {PagesServices} from '../../../services/pages.services';
 })
 export class PageDetailsComponent implements OnInit {
   id: number;
-  objectPage;
+  objectPage: object;
   title;
   logged: false;
   constructor(private route: ActivatedRoute, private pageService: PagesServices) { }
@@ -21,7 +21,17 @@ export class PageDetailsComponent implements OnInit {
        if (!data.images.startsWith('https://')){
         data.images = 'https://img-0.journaldunet.com/YY8e7EtrRfdIfec9XwoXRcVylTI=/1280x/smart/67f08fc7bfa04fedbb78badd1df132b5/ccmcms-jdn/11048473.jpg';
        }
-      this.objectPage = data;
+       if (data.hyperLink.startsWith('https://')){
+         this.objectPage = data;
+       }else{
+         this.objectPage = {
+           titre: data.titre,
+           images: data.images,
+           content: data.content,
+           hyperLink: 'https://www.google.fr/search?q='+data.hyperLink+'&safe=active',
+           hyperLinkContent: data.hyperLinkContent
+         };
+       }
     });
     this.title = 'Page' + this.id;
     // @ts-ignore

@@ -17,8 +17,10 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class PagesBackOfficeController extends AbstractController {
     private $titre = 'Pages';
+
     /**
      * @Route("/pages", name="pages_accueil")
+     * @return Response
      */
     public function indexPages(){
         return $this->render('pages/index.html.twig',array(
