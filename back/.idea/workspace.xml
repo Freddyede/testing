@@ -4,10 +4,11 @@
     <list default="true" id="d7ce54c7-d766-4212-a447-0b6f1d2822f7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/dev/web_profiler.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/dev/web_profiler.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Todo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Todo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20190716152916.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migrations/Version20190716152916.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/components/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/components/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/guards/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/guards/auth.guard.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -246,6 +247,8 @@
       <workItem from="1563882224448" duration="351000" />
       <workItem from="1563888591675" duration="199000" />
       <workItem from="1564099052253" duration="2378000" />
+      <workItem from="1564122055620" duration="956000" />
+      <workItem from="1564126340384" duration="229000" />
     </task>
     <servers />
   </component>
@@ -276,7 +279,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

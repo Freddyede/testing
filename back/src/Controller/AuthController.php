@@ -8,6 +8,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Routing\Annotation\Route;
 class AuthController extends AbstractController
 {
+
     /**
      * @Route("/register", name="register_user", methods={"POST"})
      * @param Request $request
