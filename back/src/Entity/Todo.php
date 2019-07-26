@@ -28,16 +28,26 @@ class Todo
      */
     private $idUser;
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
-    
+
+    /**
+     * @return string|null
+     */
     public function getTasks(): ?string
     {
         return $this->tasks;
     }
 
+    /**
+     * @param string $tasks
+     * @return Todo
+     */
     public function setTasks(string $tasks): self
     {
         $this->tasks = $tasks;
@@ -45,11 +55,18 @@ class Todo
         return $this;
     }
 
+    /**
+     * @return Users|null
+     */
     public function getIdUser(): ?Users
     {
         return $this->idUser;
     }
 
+    /**
+     * @param Users|null $idUser
+     * @return Todo
+     */
     public function setIdUser(?Users $idUser): self
     {
         $this->idUser = $idUser;

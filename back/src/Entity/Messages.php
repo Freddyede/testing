@@ -28,16 +28,26 @@ class Messages
      */
     private $users;
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getContent(): ?string
     {
         return $this->content;
     }
 
+    /**
+     * @param string $content
+     * @return Messages
+     */
     public function setContent(string $content): self
     {
         $this->content = $content;
@@ -45,11 +55,18 @@ class Messages
         return $this;
     }
 
+    /**
+     * @return Users|null
+     */
     public function getUsers(): ?Users
     {
         return $this->users;
     }
 
+    /**
+     * @param Users|null $users
+     * @return Messages
+     */
     public function setUsers(?Users $users): self
     {
         $this->users = $users;
